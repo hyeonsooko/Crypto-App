@@ -1,7 +1,3 @@
-Here's a polished GitHub README for your project:  
-
----
-
 # Crypto Dashboard  
 
 A comprehensive platform for exploring cryptocurrencies, NFTs, and exchanges in real-time, packed with features to keep you informed and ahead of the trends! 🚀  
