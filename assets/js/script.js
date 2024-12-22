@@ -108,7 +108,7 @@ function displayTrendCoins(coins) {
             <td class="name-column table-fixed-column"><img src="${coinData.thumb}" alt="${coinData.name}"> ${coinData.name} <span>(${coinData.symbol.toUpperCase()})</span></td>
             <td>${parseFloat(coinData.price_btc).toFixed(6)}</td>
             <td>$${coinData.data.market_cap}</td>
-            <td>$${coinData.data.total_volume}</td>
+            <td>${coinData.data.total_volume}</td>
             <td class="${coinData.data.price_change_percentage_24h.usd >= 0 ? 'green' : 'red'}">${coinData.data.price_change_percentage_24h.usd.toFixed(2)}%</td>
         `;
         row.onclick = () => window.location.href = `../../pages/coin.html?coin=${coinData.id}`;
