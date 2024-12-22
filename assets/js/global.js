@@ -90,7 +90,7 @@ function toggleSpinner(listId, spinnerId, show){
         spinnerElement.style.display = show ? 'block' : 'none';
     } 
     if(listElement){
-        listElement.style.display = show ? 'block' : 'none';
+        listElement.style.display = show ? 'none' : 'block';
     }
 }
 

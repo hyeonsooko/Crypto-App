@@ -93,7 +93,7 @@ async function fetchAndDisplay(url, idsToToggle, displayFunction, tabName = null
 function displayTrends(data){
     // only five trends of coins and nfts
     displayTrendCoins(data.coins.slice(0, 5));
-    displaytrendNfts(data.nfts.slice(0,5));
+    displayTrendNfts(data.nfts.slice(0,5));
 }
 
 function displayTrendCoins(coins) {
@@ -136,7 +136,7 @@ function displayTrendNfts(nfts) {
     nftsList.appendChild(table);
 }
 
-function displayAssets(){
+function displayAssets(data){
     const cryptoList = document.getElementById('asset-list');
     cryptoList.innerHTML = '';
     const table = createTable(['Rank', 'Coin', 'Price', '24h Price', '24h Price %', 'Total Vol', 'Market Cap', 'Last 7 Days'], 1);
@@ -147,7 +147,7 @@ function displayAssets(){
         row.innerHTML = `
             <td class="rank">${asset.market_cap_rank}</td>
             <td class="name-column table-fixed-column"><img src="${asset.image}" alt="${asset.name}"> ${asset.name} <span>(${asset.symbol.toUpperCase()})</span></td>
-            <td>${asset.current_price.toFixed(2)}</td>
+            <td>$${asset.current_price.toFixed(2)}</td>
             <td class="${asset.price_change_24h >= 0 ? 'green' : 'red'}">$${asset.price_change_24h.toFixed(2)}</td>
             <td class="${asset.price_change_percentage_24h >= 0 ? 'green' : 'red'}">${asset.price_change_percentage_24h.toFixed(2)}%</td>
             <td>$${asset.total_volume.toLocaleString()}</td>
@@ -158,14 +158,14 @@ function displayAssets(){
         sparklineData.push({
             id: asset.id,
             sparkline: asset.sparkline_in_7d.price,
-            color: asset.sparline_in_7d.price[0] <= asset.sparkline_in_7d.price[asset.sparkline_in_7d.price.length - 1] ? 'green' : 'red',
+            color: asset.sparkline_in_7d.price[0] <= asset.sparkline_in_7d.price[asset.sparkline_in_7d.price.length - 1] ? 'green' : 'red',
         });
-        row.onClick = () => window.location.href = `../../pages/coin.html?coin=${coinData.id}`;
+        row.onclick = () => window.location.href = `../../pages/coin.html?coin=${asset.id}`
     });
     cryptoList.appendChild(table);
 
     sparklineData.forEach(({id, sparkline, color }) => {
-        const ctx = document.createElement(`chart-${id}`).getContext('2d');
+        const ctx = document.getElementById(`chart-${id}`).getContext('2d');
         new Chart(ctx, {
             type: 'line',
             data: {
@@ -199,6 +199,6 @@ function displayAssets(){
                     }
                 }
             }
-        })
-    })
-}
+        });
+    });
+};
