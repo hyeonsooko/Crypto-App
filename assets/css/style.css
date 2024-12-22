@@ -84,12 +84,12 @@ img{
     object-fit: cover;
 }
 
-table tr td img{
-    width: 32px;
-    height: 32px;
-    vertical-align: middle;
-    margin-right: 6px;
-    border-radius: 12px;
+table {
+    overflow: scroll;
+}
+
+table tr td{
+    white-space: nowrap;
 }
 
 table tr td:first-child{
@@ -109,6 +109,27 @@ table tr td.name-column{
     overflow: hidden;
     text-overflow: ellipsis;
     padding-right: 30px;
+}
+
+table tr td img{
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 6px;
+    border-radius: 12px;
+}
+
+.table-fixed-column{
+    background: var(--background-color-primary);
+    position: sticky;
+    left: 0;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+table thead tr:hover{
+    background: transparent !important;
+    cursor: unset !important;
 }
 
 body{
@@ -268,11 +289,6 @@ nav .right-selection > i.ri-moon-line{
     border-bottom: 1px solid var(--border-color);
 }
 
-.trending thead tr:hover{
-    background: transparent !important;
-    cursor: unset !important;
-}
-
 .trending .coins-wrapper table tr,
 .tab-container .tab-content #asset-list table tr,
 .search-container .item table #coins-list table tr{
@@ -303,14 +319,6 @@ nav .right-selection > i.ri-moon-line{
 .trending .coins-wrapper .container .table-fixed-column,
 .trending .nfts-wrapper .container .table-fixed-column{
     left: -20px
-}
-
-.table-fixed-column{
-    background: var(--background-color-primary);
-    position: sticky;
-    left: 0;
-    z-index: 100;
-    transition: all 0.3s ease;
 }
 
 .spinner{
