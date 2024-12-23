@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <title>Crypto MarketPlace</title>
 </head>
 
-<body id="dark-theme">
+<body>
     
     <div class="main">
 
@@ -22,7 +23,7 @@
         </div>
 
         <nav>
-            <div class="left-selection">
+            <div class="left-section">
             <a href="#" class="logo">Logo.</a>
                 <div class="nav-links">
                     <a href="/index.html">Home</a>
@@ -31,7 +32,7 @@
                     <a href="/pages/about.html">About Us</a>
                 </div>
             </div>
-            <div class="right-selection">
+            <div class="right-section">
                 <form class="search" id="searchForm">
                     <i class="ri-search-line"></i>
                     <input type="text" id="searchInput" 
@@ -44,22 +45,27 @@
         </nav>
 
         <div class="chart-container">
-            <div class="readingview-widget-container" id="chart-widget">
-                <div class="tradingview-widget-copyright hidden">
-                    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
-                        <span class="white-text">Track all markets on TradingView</span>
-                    </a>
-                </div>
+            <div class="tradingview-widget-container" id="chart-widget"></div>
+            <div class="tradingview-widget-copyright hidden">
+                <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                    <span class="white-text">Track all markets on TradingView</span>
+                </a>
             </div>
         </div>
 
     </div>
+
     <footer>
         <p>hyeonsoo ko, All Rights Reserved.</p>
         <div class="social-icons">
             <a href="https://github.com/hyeonsooko/"><i class="ri-github-fill"></i></a>
         </div>
     </footer>
+
     <button onclick="scrollToTop()" id="scrollTop"><i class="ri-arrow-up-s-line"></i></button>
+
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/script.js"></script>
+
 </body>
 </html>

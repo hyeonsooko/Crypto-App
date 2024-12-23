@@ -171,24 +171,24 @@ nav{
     border-bottom: 1px solid var(--border-color);
 }
 
-nav .left-selection,
-nav .right-selection{
+nav .left-section,
+nav .right-section{
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
-nav .left-selection .logo{
+nav .left-section .logo{
     font-weight: 600;
     font-size: 26px;
 }
 
-nav .left-selection .nav-links{
+nav .left-section .nav-links{
     display: flex;
     gap: 10px;
 }
 
-nav .left-selection .nav-links a{
+nav .left-section .nav-links a{
     font-size: 13px;
     padding: 10px 14px;
     border-radius: 12px;
@@ -196,18 +196,18 @@ nav .left-selection .nav-links a{
     transition: all 0.3s ease;
 }
 
-nav .left-selection .nav-links a.active,
-nav .left-selection .nav-links a:hover{
+nav .left-section .nav-links a.active,
+nav .left-section .nav-links a:hover{
     background: var(--background-color-secondary);
     color: var(--color-white);
 }
 
-nav .right-selection{
+nav .right-section{
     width: 30%;
     gap: 20px;
 }
 
-nav .right-selection .search{
+nav .right-section .search{
     display: flex;
     align-items: center;
     background: var(--background-color-secondary);
@@ -216,19 +216,19 @@ nav .right-selection .search{
     width: 100%;
 }
 
-nav .right-selection .search input{
+nav .right-section .search input{
     padding: 10px 6px;
     background: var(--background-color-secondary);
     color: var(--color-white);
     font-size: 14px;
 }
 
-nav .right-selection .search input::placeholder,
-nav .right-selection .search i{
+nav .right-section .search input::placeholder,
+nav .right-section .search i{
     color: var(--text-secondary);
 }
 
-nav .right-selection > i{
+nav .right-section > i{
     padding: 8px;
     background: var(--background-color-secondary);
     color: var(--color-white);
@@ -238,11 +238,11 @@ nav .right-selection > i{
     transition: all 0.3s ease;
 }
 
-nav .right-selection > i.ri-sun-line{
+nav .right-section > i.ri-sun-line{
     transform: rotate(0deg);
 }
 
-nav .right-selection > i.ri-moon-line{
+nav .right-section > i.ri-moon-line{
     transform: rotate(360deg);
 }
 
