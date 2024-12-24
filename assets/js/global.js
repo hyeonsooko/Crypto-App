@@ -41,6 +41,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    const form = document.getElementById('searchForm');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault()
+
+        const query = document.getElementById('searchInput').value.trim();
+        if(!query) return;
+
+        window.location.href = `/../../pages/search.html?query=${query}`;
+        
+
+    });
+
     fetchGlobal();
 })
 
