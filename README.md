@@ -22,6 +22,15 @@ A comprehensive platform for exploring cryptocurrencies, NFTs, and exchanges in 
 - **Backend**: Node.js, Express  
 - **API**: CoinGecko, TradingView  
 - **Real-Time Features**: WebSocket integration for live updates
+
+## Future Updates
+
+- **Enhance Functionality**
+- Market Trends: Add a dashboard that displays live cryptocurrency prices and trends using APIs like CoinGecko or CoinMarketCap.
+- Portfolio Tracker: Allow users to create and manage a portfolio of cryptocurrencies. Track profits and losses in real time.
+- Authentication: Implement secure user registration and login (e.g., using JWT for token-based authentication).
+- User Dashboard: Provide personalized dashboards with saved preferences.
+- Admin Panel: Add admin functionalities like managing users and viewing analytics.
   
 ## 📄 License  
 
